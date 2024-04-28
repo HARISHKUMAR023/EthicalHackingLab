@@ -1,0 +1,43 @@
+/* *{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+h1{
+    color: white;
+}
+.lab-card{
+    background-color: red;
+    border-radius: 0.3rem;
+    width:350px;
+    height: auto;
+}
+.lab-card-img{
+    width: 340px;
+    height: 300px;
+    margin-bottom: 40px;
+    margin: 5px;
+}
+.lab-card-try-btn{
+    background-color: green;
+    color: white;
+    font-weight: 700;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 0.2rem;
+    text-transform: none;
+}
+.lab-card-learn-btn{
+    background-color: rgb(222, 14, 198);
+    color: white;
+    font-weight: 700;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 0.2rem;
+    text-transform: none;  
+
+}
+a{
+    text-decoration: none;
+} */
