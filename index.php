@@ -55,7 +55,11 @@
             <div class="d-flex-col">
             <h1 class="main-h1">Welcome to <span class="main-h1-span">கவசம்</span></h1>
             
-            <a href="./php/xss.php" class="btn btn-shin mt-3">Challange</a>
+            <p class="mt-3 main-p">Our platform offers real-world scenarios to test and enhance your cybersecurity skills.<br> Whether you're a beginner or an experienced professional, Kavasam is your go-to resource for all things cybersecurity.</p>
+
+<a href="" class="btn btn-shin mt-3">Start a Challenge</a>
+
+<!-- <p class="mt-3">"Kavasam is an amazing platform. The challenges are engaging and I've learned so much." - User Testimonial</p> -->
             </div>
            
         </div>
