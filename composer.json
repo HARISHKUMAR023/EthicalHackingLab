@@ -1,0 +1,5 @@
+{
+    "require": {
+        "omines/oauth2-gitlab": "^3.6"
+    }
+}
