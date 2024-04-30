@@ -1,6 +1,10 @@
 body {
     background-color: #0b121f;
     color: #0f0;
+    
+        /* position: relative;
+        height: 100%; */
+      
     /* font-family: 'Courier New', monospace; */
 }
 .card {
@@ -73,6 +77,8 @@ body {
     text-shadow: 2px 10px 5px rgb(159, 239, 0);
     margin-bottom: 30px;
     font-weight: 500;
+
+    
 }
 
 .btn:hover{
@@ -96,3 +102,73 @@ body {
     color: white;
     line-height: 1.6;
 }
+
+
+.bg-footer{
+    backdrop-filter: blur(10px);
+    background-color: #18213179;
+
+}
+footer{
+    color: white;
+    font-weight: 400;
+}
+.footer-p{
+    color: white;
+    font-weight: 400;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.footer-h3{
+    color: white;
+    font-weight: 400;
+    background: #B5CE36;
+    background: linear-gradient(to right, #B5CE36 0%, #0E850C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.developedby{
+    color: rgb(144, 143, 143);
+    font-weight: 400;
+
+}
+
+/* .swiper {
+    width: 10%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-left: 100px;
+  }  */
+/* .lab-card{
+    background-color: white;
+    width: 100%;
+    height: auto;
+} */
+
+
+
+
+/* .labs-card-h1{
+    background-color: #ffffff;
+    border-color: rgb(244, 244, 244);
+    text-align: center;
+    padding: 20px;
+} */
+/* 
+
+
+  /* .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+  } */
+
+  /* .swiper-slide img {
+    display: block;
+    width: 30%;
+  } */
