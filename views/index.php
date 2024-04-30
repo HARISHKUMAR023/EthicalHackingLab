@@ -160,11 +160,11 @@
 </section>
    <!-- ========== Start footer ========== -->
    <footer>
-    <div class="container-fluid bg-footer px-3" style="padding-top: 40px; padding-bottom: 50px;  ">
+    <div class="container-fluid bg-footer px-3" style="padding-top: 40px; padding-bottom: 20px;  ">
       <div class="row">
         <div class="col-md-4">
           <img src="../assets/logo.png" alt="Kavasam" width="100" height="80">
-          <p class="footer-p">Kavasam is your ultimate shield in the digital world. We provide a robust platform for cybersecurity enthusiasts to learn, practice, and master various aspects of cybersecurity.</p>
+          <p class="footer-p"><span class="main-h1-span pt-2 fw-bold">Kavasam</span> is your ultimate shield in the digital world. We provide a robust platform for cybersecurity enthusiasts to learn, practice, and master various aspects of cybersecurity.</p>
         </div>
         <div class="col-md-4">
           <h3 class="footer-h3">Quick Links</h3>
@@ -176,10 +176,10 @@
         </div>
         <div class="col-md-4">
           <h3 class="footer-h3">Contact Us</h3>
-          <p class="footer-p">Kavasam Cybersecurity Labs<br>1234 Cyber Street<br>Tamilnadu, India</p>
+          <p class="footer-p"><span class="main-h1-span pt-2 fw-bold">Kavasam</span> Cybersecurity Labs<br>1234 Cyber Street<br>Tamilnadu, India</p>
           <p class="footer-p">Email:harishkumarsp023@gmail.com</p>
         </div>
-
+<p class="text-center developedby">👨‍💻 Developer by 😍💖Harishkumar N</p>
    </footer>
    
    <!-- ========== End footer ========== -->
