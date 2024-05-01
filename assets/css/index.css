@@ -88,6 +88,7 @@ body {
     border: none;
     border-top: 10px solid gray;
     height: 0;
+    margin: 0;
 
 }
 .about-h1{
@@ -136,6 +137,44 @@ a{
     font-weight: 400;
 
 }
+ #ctf-flag {
+   background: url('../maticbg2.jpg') no-repeat center center;
+    /* padding: 20px 0; */
+    background-size: auto;
+    background-size: cover;
+    z-index: -1;
+    backdrop-filter: blur(3px);
+    background-color: rgba(34, 34, 34, 0.455);
+    color: white;
+}
+.ctf-flag-container{
+    backdrop-filter: blur(2px);
+    background-color: rgba(34, 34, 34, 0.455);
+}
+
+/* #ctf-flag h2 {
+    color: #333;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#ctf-flag p {
+    color: #666;
+    font-size: 16px;
+    text-align: center;
+}
+
+#flag {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-family: monospace;
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+    min-height: 50px;
+}  */
 
 /* .swiper {
     width: 10%;
