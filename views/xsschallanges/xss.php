@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Vulnerable XSS Page</title>
+    <title>XSS Page</title>
 </head>
 <body>
     <h1>Guest Book</h1>

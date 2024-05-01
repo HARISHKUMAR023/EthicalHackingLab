@@ -1,0 +1,55 @@
+body {
+    background-color: #0b121f;
+    color: rgb(235, 240, 235);
+    
+        /* position: relative;
+        height: 100%; */
+      
+    /* font-family: 'Courier New', monospace; */
+}
+.lab-backgourd-cover{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('../bg-lab.jpg') no-repeat center center;
+      background-size: auto;
+    background-size: cover;
+    z-index: -1;
+}
+.challange-card{
+    width: 500px;
+    height: 320px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(19, 19, 19, 0.144);
+    border-radius: 0.4rem;
+   
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.challange-card-image{
+    border-radius: 0.4rem;
+    padding: 5px;
+}
+.btn-primary {
+    background-color: #0f0;
+    border-color: #0f0;
+    font-weight: 700;
+}
+.btn-Challenge{
+ 	background-color: rgb(234 88 12);
+    border-color: rgb(255, 0, 0);
+    font-weight: 700;
+    color: white;
+}
+.challange-card-input{
+    padding: 10px;
+margin: 5px;
+border-radius: 0.3rem;
+}
+.challange-card-h1{
+    background: #B5CE36;
+    background: linear-gradient(to right, #B5CE36 0%, #0E850C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}

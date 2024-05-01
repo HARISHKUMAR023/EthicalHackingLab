@@ -30,7 +30,32 @@ try {
     $_SESSION['access_token'] = $accessToken;
   // We got an access token, let's now get the user's details
 $user = $provider->getResourceOwner($accessToken);
+$db = new mysqli('localhost', 'root', '', 'kavasam');
+// Check if the user already exists in the database
+$result = $db->query(sprintf(
+    "SELECT * FROM users WHERE gitlab_id = '%s'",
+    $db->real_escape_string($user->getId())
+));
 
+if ($result->num_rows > 0) {
+    // The user already exists, so update their data
+    $db->query(sprintf(
+        "UPDATE users SET name = '%s', email = '%s', avatar_url = '%s' WHERE gitlab_id = '%s'",
+        $db->real_escape_string($user->getName()),
+        $db->real_escape_string($user->getEmail()),
+        $db->real_escape_string($user->getAvatarUrl()),
+        $db->real_escape_string($user->getId())
+    ));
+} else {
+    // The user doesn't exist, so insert a new record
+    $db->query(sprintf(
+        "INSERT INTO users (gitlab_id, name, email, avatar_url) VALUES ('%s', '%s', '%s', '%s')",
+        $db->real_escape_string($user->getId()),
+        $db->real_escape_string($user->getName()),
+        $db->real_escape_string($user->getEmail()),
+        $db->real_escape_string($user->getAvatarUrl())
+    ));
+}
 // Store the user's details in the session
 $_SESSION['user'] = $user->toArray();
     // Redirect to the dashboard
