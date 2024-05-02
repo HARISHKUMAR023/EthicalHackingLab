@@ -7489,7 +7489,7 @@ textarea.form-control-lg {
   min-height: var(--cui-footer-min-height);
   padding: var(--cui-footer-padding-y) var(--cui-footer-padding-x);
   color: var(--cui-footer-color);
-  background: var(--cui-footer-bg);
+  /* background: var(--cui-footer-bg); */
   border-top: var(--cui-footer-border);
   min-height: calc(3rem + 1px);
 }

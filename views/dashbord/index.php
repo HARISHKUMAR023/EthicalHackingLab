@@ -577,8 +577,8 @@
     <!-- ========== End contetn of page  ========== -->
     
       <footer class="footer px-4">
-        <div><a href="https://coreui.io">CoreUI </a><a href="https://coreui.io/product/free-bootstrap-admin-template/">Bootstrap Admin Template</a> &copy; 2024 creativeLabs.</div>
-        <div class="ms-auto">Powered by&nbsp;<a href="https://coreui.io/docs/">CoreUI UI Components</a></div>
+        <div><a href="https://coreui.io">Dashboard </a><a href="#">kavasam</a> &copy; 2024 kavasamLabs.</div>
+        <div class="ms-auto">Powered by&nbsp;<a href="https://coreui.io/docs/">kavasam Labs </a></div>
       </footer>
     </div>
     <!-- CoreUI and necessary plugins-->
