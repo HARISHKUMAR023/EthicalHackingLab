@@ -53,7 +53,20 @@
   </head>
   <body >
   <!-- <div id="main-ui-bg" >
+  <?php
+// Start the session
+session_start();
 
+// Check if the user is authenticated
+if (!isset($_SESSION['access_token'])) {
+    // User is not authenticated, redirect to login page
+    header('Location: ../index.php');
+    exit();
+}
+
+// User is authenticated, proceed with the rest of the page
+// ...
+?>
   </div> -->
     <div class="sidebar sidebar-dark sidebar-fixed border-end" id="sidebar">
      
@@ -82,7 +95,7 @@
             <svg class="nav-icon">
               <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-drop"></use>
             </svg> Cloud server</a></li>
-        <li class="nav-item"><a class="nav-link" href="typography.html">
+        <li class="nav-item"><a class="nav-link" href="challange.php">
             <svg class="nav-icon">
               <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-pencil"></use>
             </svg> Challange Mechine</a></li>
@@ -252,10 +265,10 @@
                 <div class="dropdown-divider"></div><a class="dropdown-item" href="#">
                   <svg class="icon me-2">
                     <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-lock-locked"></use>
-                  </svg> Lock Account</a><a class="dropdown-item" href="#">
+                  </svg> Lock Account</a><a class="dropdown-item" href="logout.php">
                   <svg class="icon me-2">
                     <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-account-logout"></use>
-                  </svg> Logout</a>
+                  </svg> Logout kavasam</a>
               </div>
             </li>
           </ul>
@@ -300,14 +313,49 @@
                             </svg>
                           </th>
                           <th class="bg-body-secondary">User</th>
-                          <th class="bg-body-secondary text-center">Country</th>
-                          <th class="bg-body-secondary">Usage</th>
-                          <th class="bg-body-secondary text-center">Payment Method</th>
+                          <th class="bg-body-secondary text-center">Gitlab Id</th>
+                          <th class="bg-body-secondary">Email</th>
+                          <th class="bg-body-secondary text-center">Ip Address </th>
                           <th class="bg-body-secondary">Activity</th>
                           <th class="bg-body-secondary"></th>
                         </tr>
                       </thead>
                       <tbody>
+                        <?php 
+$db = new mysqli('localhost', 'root', '', 'kavasam');
+
+// Check connection
+if (!$db) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// Step 2: Fetch data from the database
+$sql = "SELECT * FROM users";
+$result = mysqli_query($db, $sql);
+
+// Step 3: Loop through the data and display each row in the table
+if (mysqli_num_rows($result) > 0) {
+    while($row = mysqli_fetch_assoc($result)) {
+        echo "<tr class='align-middle'>";
+        
+        echo "<td class='text-center'><div class='avatar avatar-md'><img class='avatar-img' src='" . $row['avatar_url'] . "' alt='user@email.com'><span class='avatar-status bg-success'></span></div></td>";
+        
+        echo "<td class=''><div class='text-nowrap'>" . $row['name'] . "</div><div class='small text-body-secondary text-nowrap'><span>New</span> | Registered: " . $row['gitlab_id'] . "</div></td>";
+        echo "<td class='text-center'><div  class='small text-body-secondary'></div><div class='fw-semibold text-nowrap'> " . $row['gitlab_id'] . "</div></td>";
+        echo "<td class=''><div class='fw-semibold text-nowrap'> " . $row['email'] . "</div></td>";
+        echo "<td class='text-center'><div class='fw-semibold text-nowrap'> " . $row['ip_address'] . "</div></td>";
+        // Add more table cells as needed...
+        echo "<td class=''><div  class='small text-body-secondary'>Last login </div><div class='fw-semibold text-nowrap'> " . $row['last_login'] . "</div></td>";
+        echo "</tr>";
+    }
+} else {
+    echo "0 results";
+}
+
+mysqli_close($db);
+                        
+                        
+                        ?>
                         <tr class="align-middle">
                           <td class="text-center">
                             <div class="avatar avatar-md"><img class="avatar-img" src="assets/img/avatars/1.jpg" alt="user@email.com"><span class="avatar-status bg-success"></span></div>
@@ -350,7 +398,7 @@
                             </div>
                           </td>
                         </tr>
-                        <tr class="align-middle">
+                        <!-- <tr class="align-middle">
                           <td class="text-center">
                             <div class="avatar avatar-md"><img class="avatar-img" src="assets/img/avatars/2.jpg" alt="user@email.com"><span class="avatar-status bg-danger"></span></div>
                           </td>
@@ -559,7 +607,7 @@
                               <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="#">Info</a><a class="dropdown-item" href="#">Edit</a><a class="dropdown-item text-danger" href="#">Delete</a></div>
                             </div>
                           </td>
-                        </tr>
+                        </tr> -->
                       </tbody>
                     </table>
                   </div>

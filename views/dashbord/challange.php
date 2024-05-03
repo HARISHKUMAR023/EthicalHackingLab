@@ -16,7 +16,7 @@
     <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
     <meta name="author" content="Łukasz Holeczek">
     <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
-    <title>CoreUI Free Bootstrap Admin Template</title>
+    <title>Kavasam Dashbord</title>
     <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
@@ -26,61 +26,88 @@
     <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <!-- <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png"> -->
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png"> -->
+    <link rel="icon" type="image/png"  href="../../assets/logo-main.svg">
+   
     <link rel="manifest" href="assets/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- Vendors styles-->
-    <link rel="stylesheet" href="node_modules/simplebar/dist/simplebar.css">
+    <!-- <link rel="stylesheet" href="node_modules/simplebar/dist/simplebar.css"> -->
     <link rel="stylesheet" href="css/vendors/simplebar.css">
     <!-- Main styles for this application-->
     <link href="css/style.css" rel="stylesheet">
     <!-- We use those styles to show code examples, you should remove them in your application.-->
-    <link href="css/examples.css" rel="stylesheet">
+    <!-- <link href="css/examples.css" rel="stylesheet"> -->
     <!-- We use those styles to style Carbon ads and CoreUI PRO banner, you should remove them in your application.-->
-    <link href="css/ads.css" rel="stylesheet">
+    <!-- <link href="css/ads.css" rel="stylesheet"> -->
     <script src="js/config.js"></script>
     <script src="js/color-modes.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@coreui/coreui@5.0.0/dist/css/themes/bootstrap/bootstrap.min.css" rel="stylesheet" integrity="sha384-/RDR4U8w9nL193EPIaVcrk6XQ4e22oyREAvWpltey9f8FUsM4MyhP+ExTvt4O6qk" crossorigin="anonymous">
+    <link rel="stylesheet"href="css/kavasam.css">
+    <!-- <link href="node_modules/@coreui/chartjs/dist/css/coreui-chartjs.css" rel="stylesheet"> -->
+    <link href="css/labview.css" rel="stylesheet">
   </head>
-  <body>
+  <body >
+  <!-- <div id="main-ui-bg" >
+  <?php
+// Start the session
+session_start();
+
+// Check if the user is authenticated
+if (!isset($_SESSION['access_token'])) {
+    // User is not authenticated, redirect to login page
+    header('Location: ../index.php');
+    exit();
+}
+
+// User is authenticated, proceed with the rest of the page
+// ...
+?>
+  </div> -->
     <div class="sidebar sidebar-dark sidebar-fixed border-end" id="sidebar">
+     
+
+
+      <!-- ========== Start asite ========== -->
       <div class="sidebar-header border-bottom">
         <div class="sidebar-brand">
-          <svg class="sidebar-brand-full" width="88" height="32" alt="CoreUI Logo">
-            <use xlink:href="assets/brand/coreui.svg#full"></use>
+          <img src="../../assets/kavasamlabs.svg" class="sidebar-brand-full"  width="200px" height="100px"  alt="kavaram logo">
+          <!-- <svg class="sidebar-brand-full" width="88" height="32" alt="CoreUI Logo">
+            <use xlink:href="../../assets/logo-main.svg#full"></use>
           </svg>
           <svg class="sidebar-brand-narrow" width="32" height="32" alt="CoreUI Logo">
-            <use xlink:href="assets/brand/coreui.svg#signet"></use>
+            <use xlink:href="../../assets/logo-main.svg.svg#signet"></use> -->
           </svg>
         </div>
         <button class="btn-close d-lg-none" type="button" data-coreui-dismiss="offcanvas" data-coreui-theme="dark" aria-label="Close" onclick="coreui.Sidebar.getInstance(document.querySelector(&quot;#sidebar&quot;)).toggle()"></button>
       </div>
       <ul class="sidebar-nav" data-coreui="navigation" data-simplebar>
-        <li class="nav-item"><a class="nav-link" href="index.html">
+        <li class="nav-item"><a class="nav-link" href="index.php">
             <svg class="nav-icon">
               <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-speedometer"></use>
             </svg> Dashboard<span class="badge badge-sm bg-info ms-auto">NEW</span></a></li>
-        <li class="nav-title">Theme</li>
+        <li class="nav-title">Mechine</li>
         <li class="nav-item"><a class="nav-link" href="colors.html">
             <svg class="nav-icon">
               <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-drop"></use>
-            </svg> Colors</a></li>
+            </svg> Cloud server</a></li>
         <li class="nav-item"><a class="nav-link" href="typography.html">
             <svg class="nav-icon">
               <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-pencil"></use>
-            </svg> Typography</a></li>
-        <li class="nav-title">Components</li>
+            </svg> Challange Mechine</a></li>
+        <li class="nav-title">Leaderboard</li>
         <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
             <svg class="nav-icon">
               <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-puzzle"></use>
-            </svg> Base</a>
+            </svg> Codeing Labs</a>
           <ul class="nav-group-items compact">
-            <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Accordion</a></li>
-            <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Breadcrumb</a></li>
+            <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span>Kavasam Palyers</a></li>
+            <!-- <li class="nav-item"><a class="nav-link" href="base/breadcrumb.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Breadcrumb</a></li>
             <li class="nav-item"><a class="nav-link" href="base/cards.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Cards</a></li>
             <li class="nav-item"><a class="nav-link" href="base/carousel.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Carousel</a></li>
             <li class="nav-item"><a class="nav-link" href="base/collapse.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Collapse</a></li>
@@ -92,65 +119,24 @@
             <li class="nav-item"><a class="nav-link" href="base/progress.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Progress</a></li>
             <li class="nav-item"><a class="nav-link" href="base/spinners.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Spinners</a></li>
             <li class="nav-item"><a class="nav-link" href="base/tables.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Tables</a></li>
-            <li class="nav-item"><a class="nav-link" href="base/tooltips.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Tooltips</a></li>
+            <li class="nav-item"><a class="nav-link" href="base/tooltips.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Tooltips</a></li> -->
           </ul>
         </li>
         <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
             <svg class="nav-icon">
               <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-cursor"></use>
-            </svg> Buttons</a>
+            </svg>Hacking Labs</a>
           <ul class="nav-group-items compact">
             <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Buttons</a></li>
             <li class="nav-item"><a class="nav-link" href="buttons/button-group.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Buttons Group</a></li>
             <li class="nav-item"><a class="nav-link" href="buttons/dropdowns.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Dropdowns</a></li>
           </ul>
         </li>
-        <li class="nav-item"><a class="nav-link" href="charts.html">
-            <svg class="nav-icon">
-              <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-chart-pie"></use>
-            </svg> Charts</a></li>
-        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
-            <svg class="nav-icon">
-              <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-notes"></use>
-            </svg> Forms</a>
-          <ul class="nav-group-items compact">
-            <li class="nav-item"><a class="nav-link" href="forms/form-control.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Form Control</a></li>
-            <li class="nav-item"><a class="nav-link" href="forms/select.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Select</a></li>
-            <li class="nav-item"><a class="nav-link" href="forms/checks-radios.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Checks and radios</a></li>
-            <li class="nav-item"><a class="nav-link" href="forms/range.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Range</a></li>
-            <li class="nav-item"><a class="nav-link" href="forms/input-group.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Input group</a></li>
-            <li class="nav-item"><a class="nav-link" href="forms/floating-labels.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Floating labels</a></li>
-            <li class="nav-item"><a class="nav-link" href="forms/layout.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Layout</a></li>
-            <li class="nav-item"><a class="nav-link" href="forms/validation.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Validation</a></li>
-          </ul>
-        </li>
-        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
-            <svg class="nav-icon">
-              <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-star"></use>
-            </svg> Icons</a>
-          <ul class="nav-group-items compact">
-            <li class="nav-item"><a class="nav-link" href="icons/coreui-icons-free.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> CoreUI Icons<span class="badge badge-sm bg-success ms-auto">Free</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="icons/coreui-icons-brand.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> CoreUI Icons - Brand</a></li>
-            <li class="nav-item"><a class="nav-link" href="icons/coreui-icons-flag.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> CoreUI Icons - Flag</a></li>
-          </ul>
-        </li>
-        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
-            <svg class="nav-icon">
-              <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-bell"></use>
-            </svg> Notifications</a>
-          <ul class="nav-group-items compact">
-            <li class="nav-item"><a class="nav-link" href="notifications/alerts.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Alerts</a></li>
-            <li class="nav-item"><a class="nav-link" href="notifications/badge.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Badge</a></li>
-            <li class="nav-item"><a class="nav-link" href="notifications/modals.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Modals</a></li>
-            <li class="nav-item"><a class="nav-link" href="notifications/toasts.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Toasts</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="widgets.html">
-            <svg class="nav-icon">
-              <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-calculator"></use>
-            </svg> Widgets<span class="badge badge-sm bg-info ms-auto">NEW</span></a></li>
-        <li class="nav-divider"></li>
-        <li class="nav-title">Extras</li>
+      
+
+
+
+        <li class="nav-title">Supports</li>
         <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
             <svg class="nav-icon">
               <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-star"></use>
@@ -174,15 +160,10 @@
                 </svg> Error 500</a></li>
           </ul>
         </li>
-        <li class="nav-item mt-auto"><a class="nav-link" href="https://coreui.io/docs/templates/installation/" target="_blank">
-            <svg class="nav-icon">
-              <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-description"></use>
-            </svg> Docs</a></li>
-        <li class="nav-item"><a class="nav-link text-primary fw-semibold" href="https://coreui.io/product/bootstrap-dashboard-template/" target="_top">
-            <svg class="nav-icon text-primary">
-              <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-layers"></use>
-            </svg> Try CoreUI PRO</a></li>
+ 
       </ul>
+      <!-- ========== End asite ========== -->
+      
       <div class="sidebar-footer border-top d-none d-md-flex">     
         <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
       </div>
@@ -285,10 +266,10 @@
                 <div class="dropdown-divider"></div><a class="dropdown-item" href="#">
                   <svg class="icon me-2">
                     <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-lock-locked"></use>
-                  </svg> Lock Account</a><a class="dropdown-item" href="#">
+                  </svg> Lock Account</a><a class="dropdown-item" href="logout.php">
                   <svg class="icon me-2">
                     <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-account-logout"></use>
-                  </svg> Logout</a>
+                  </svg> Logout kavasam</a>
               </div>
             </li>
           </ul>
@@ -298,174 +279,43 @@
             <ol class="breadcrumb my-0">
               <li class="breadcrumb-item"><a href="#">Home</a>
               </li>
-              <li class="breadcrumb-item"><span>Theme</span>
-              </li>
-              <li class="breadcrumb-item active"><span>Typography</span>
+              <li class="breadcrumb-item active"><span>Dashboard</span>
               </li>
             </ol>
           </nav>
         </div>
       </header>
-      <div class="body flex-grow-1">
-        <div class="container-lg px-4">
-          <div class="row mb-4">
-            <div class="col-xl-5 col-xxl-4 mb-4 mb-xl-0">
-              <script id="_carbonads_js" async="" type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEAICKJY&amp;placement=coreuiio"></script>
+    <!-- ========== Start contetn of page  ========== -->
+    
+    <div class="container mt-3">
+        <div class="challange-card">
+            <div class="d-flex">
+                <img src="../../assets/labthumline/xss.jpeg" alt="" class="challange-card-image" with="150px" height="200px">
+                <div>
+                <h4 class="px-2 py-1 challange-card-h1 ">Script Slinger Showdown</h4>
+                    <p class="px-2">Welcome to the Cross-Site Scripting Showdown! In this challenge, you'll be stepping into the shoes of a cybersecurity expert, tasked with identifying and exploiting a basic XSS vulnerability</p>
+                </div>
+
             </div>
-            <div class="col-xl-7 col-xxl-8"><a class="banner-coreui-pro" href="https://coreui.io/product/bootstrap-dashboard-template/?theme=default">
-                <svg class="banner-coreui-pro-logo d-xl-none d-xxl-block" width="100" height="100" alt="CoreUI Logo">
-                  <use xlink:href="assets/brand/coreui.svg#signet"></use>
-                </svg>
-                <h4 class="fw-bolder">Elevate Your Design with CoreUI PRO!</h4>
-                <p>Unlock a world of possibilities: More themes, enhanced components (Date Picker, Multi Select, and more), and priority support.</p></a></div>
-          </div>
-          <div class="card mb-4">
-            <div class="card-header">Headings</div>
-            <div class="card-body">
-              <p>Documentation and examples for Bootstrap typography, including global settings, headings, body text, lists, and more.</p>
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th>Heading</th>
-                    <th>Example</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <p><code class="highlighter-rouge">&lt;h1&gt;&lt;/h1&gt;</code></p>
-                    </td>
-                    <td><span class="h1">h1. Bootstrap heading</span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <p><code class="highlighter-rouge">&lt;h2&gt;&lt;/h2&gt;</code></p>
-                    </td>
-                    <td><span class="h2">h2. Bootstrap heading</span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <p><code class="highlighter-rouge">&lt;h3&gt;&lt;/h3&gt;</code></p>
-                    </td>
-                    <td><span class="h3">h3. Bootstrap heading</span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <p><code class="highlighter-rouge">&lt;h4&gt;&lt;/h4&gt;</code></p>
-                    </td>
-                    <td><span class="h4">h4. Bootstrap heading</span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <p><code class="highlighter-rouge">&lt;h5&gt;&lt;/h5&gt;</code></p>
-                    </td>
-                    <td><span class="h5">h5. Bootstrap heading</span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <p><code class="highlighter-rouge">&lt;h6&gt;&lt;/h6&gt;</code></p>
-                    </td>
-                    <td><span class="h6">h6. Bootstrap heading</span></td>
-                  </tr>
-                </tbody>
-              </table>
+            <div>
+            <form action="submit_flag.php" method="post">
+                      
+                            <input type="text" class="challange-card-input" name="flag" placeholder="Enter the flag">
+                     
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+<a href="./xsschallanges/xss.php" target="_blank" class="btn btn-Challenge mt-2 mx-2">Start Challenge</a>
+                    <a href="learn.php" class="btn btn-secondary mt-2">Learn</a>
             </div>
-          </div>
-          <div class="card mb-4">
-            <div class="card-header">Headings</div>
-            <div class="card-body">
-              <p><code class="highlighter-rouge">.h1</code> through<code class="highlighter-rouge">.h6</code> classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.</p>
-              <div class="bd-example">
-                <p class="h1">h1. Bootstrap heading</p>
-                <p class="h2">h2. Bootstrap heading</p>
-                <p class="h3">h3. Bootstrap heading</p>
-                <p class="h4">h4. Bootstrap heading</p>
-                <p class="h5">h5. Bootstrap heading</p>
-                <p class="h6">h6. Bootstrap heading</p>
-              </div>
-            </div>
-          </div>
-          <div class="card mb-4">
-            <div class="card-header">Display headings</div>
-            <div class="card-body">
-              <p>Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a<strong>display heading</strong>—a larger, slightly more opinionated heading style.</p>
-              <div class="bd-example bd-example-type">
-                <table class="table">
-                  <tbody>
-                    <tr>
-                      <td><span class="display-1">Display 1</span></td>
-                    </tr>
-                    <tr>
-                      <td><span class="display-2">Display 2</span></td>
-                    </tr>
-                    <tr>
-                      <td><span class="display-3">Display 3</span></td>
-                    </tr>
-                    <tr>
-                      <td><span class="display-4">Display 4</span></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-          <div class="card mb-4">
-            <div class="card-header">Inline text elements</div>
-            <div class="card-body">
-              <p>Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a<strong>display heading</strong>—a larger, slightly more opinionated heading style.</p>
-              <div class="bd-example">
-                <p>You can use the mark tag to
-                  <mark>highlight</mark> text.
-                </p>
-                <p>
-                  <del>This line of text is meant to be treated as deleted text.</del>
-                </p>
-                <p>
-                  <s>This line of text is meant to be treated as no longer accurate.</s>
-                </p>
-                <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
-                <p>
-                  <u>This line of text will render as underlined</u>
-                </p>
-                <p><small>This line of text is meant to be treated as fine print.</small></p>
-                <p><strong>This line rendered as bold text.</strong></p>
-                <p><em>This line rendered as italicized text.</em></p>
-              </div>
-            </div>
-          </div>
-          <div class="card mb-4">
-            <div class="card-header">Description list alignment</div>
-            <div class="card-body">
-              <p>Align terms and descriptions horizontally by using our grid system’s predefined classes (or semantic mixins). For longer terms, you can optionally add a<code class="highlighter-rouge">.text-truncate</code> class to truncate the text with an ellipsis.</p>
-              <div class="bd-example">
-                <dl class="row">
-                  <dt class="col-sm-3">Description lists</dt>
-                  <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
-                  <dt class="col-sm-3">Euismod</dt>
-                  <dd class="col-sm-9">
-                    <p>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</p>
-                    <p>Donec id elit non mi porta gravida at eget metus.</p>
-                  </dd>
-                  <dt class="col-sm-3">Malesuada porta</dt>
-                  <dd class="col-sm-9">Etiam porta sem malesuada magna mollis euismod.</dd>
-                  <dt class="col-sm-3 text-truncate">Truncated term is truncated</dt>
-                  <dd class="col-sm-9">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
-                  <dt class="col-sm-3">Nesting</dt>
-                  <dd class="col-sm-9">
-                    <dl class="row">
-                      <dt class="col-sm-4">Nested definition list</dt>
-                      <dd class="col-sm-8">Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc.</dd>
-                    </dl>
-                  </dd>
-                </dl>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
+
+
+    <!-- ========== End contetn of page  ========== -->
+    
       <footer class="footer px-4">
-        <div><a href="https://coreui.io">CoreUI </a><a href="https://coreui.io/product/free-bootstrap-admin-template/">Bootstrap Admin Template</a> &copy; 2024 creativeLabs.</div>
-        <div class="ms-auto">Powered by&nbsp;<a href="https://coreui.io/docs/">CoreUI UI Components</a></div>
+        <div><a href="https://coreui.io">Dashboard </a><a href="#">kavasam</a> &copy; 2024 kavasamLabs.</div>
+        <div class="ms-auto">Powered by&nbsp;<a href="https://coreui.io/docs/">kavasam Labs </a></div>
       </footer>
     </div>
     <!-- CoreUI and necessary plugins-->
@@ -481,6 +331,12 @@
       });
       
     </script>
+    <!-- Plugins and scripts required by this view-->
+    <!-- <script src="node_modules/chart.js/dist/chart.umd.js"></script>
+    <script src="node_modules/@coreui/chartjs/dist/js/coreui-chartjs.js"></script>
+    <script src="node_modules/@coreui/utils/dist/umd/index.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@coreui/coreui@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Xjrv08HR1c2s0dxQXZLAK1a0A+er+hbRmumMrQbmr0XmSF6/j09KKC6RuwDi3vKM" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
     <script> 
     </script>
   </body>
