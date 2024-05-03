@@ -52,22 +52,21 @@
     <!-- <link href="node_modules/@coreui/chartjs/dist/css/coreui-chartjs.css" rel="stylesheet"> -->
   </head>
   <body >
-  <!-- <div id="main-ui-bg" >
-  <?php
-// Start the session
+  
+  
+<?php
 session_start();
 
-// Check if the user is authenticated
 if (!isset($_SESSION['access_token'])) {
-    // User is not authenticated, redirect to login page
+    
     header('Location: ../index.php');
     exit();
 }
-
-// User is authenticated, proceed with the rest of the page
-// ...
 ?>
-  </div> -->
+
+
+
+
     <div class="sidebar sidebar-dark sidebar-fixed border-end" id="sidebar">
      
 

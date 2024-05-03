@@ -66,6 +66,7 @@ if ($result->num_rows > 0) {
 }
 // Store the user's details in the session
 $_SESSION['user'] = $user->toArray();
+$_SESSION['user']['id'] = $user->getId();
     // Redirect to the dashboard
     header('Location: http://localhost/EthicalHackingLab/views/dashbord/index.php');
     exit();

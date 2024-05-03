@@ -51,6 +51,7 @@
     <link rel="stylesheet"href="css/kavasam.css">
     <!-- <link href="node_modules/@coreui/chartjs/dist/css/coreui-chartjs.css" rel="stylesheet"> -->
     <link href="css/labview.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
   </head>
   <body >
   <!-- <div id="main-ui-bg" >
@@ -298,13 +299,12 @@ if (!isset($_SESSION['access_token'])) {
 
             </div>
             <div>
-            <form action="submit_flag.php" method="post">
-                      
-                            <input type="text" class="challange-card-input" name="flag" placeholder="Enter the flag">
-                     
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-<a href="./xsschallanges/xss.php" target="_blank" class="btn btn-Challenge mt-2 mx-2">Start Challenge</a>
+            <form id="flag-form" action="submit_flag.php" method="post">
+    <input type="text" class="challange-card-input" name="flag" placeholder="Enter the flag">
+    <input type="hidden" name="challenge_id" value="1"> <!-- Replace 1 with the actual challenge ID -->
+    <button id="submit-button" type="submit" class="btn btn-primary">Submit</button>
+</form>
+<a href="../xsschallanges/xss.php" target="_blank" class="btn btn-Challenge mt-2 mx-2">Start Challenge</a>
                     <a href="learn.php" class="btn btn-secondary mt-2">Learn</a>
             </div>
         </div>
@@ -323,7 +323,7 @@ if (!isset($_SESSION['access_token'])) {
     <script src="node_modules/simplebar/dist/simplebar.min.js"></script>
     <script>
       const header = document.querySelector('header.header');
-      
+        
       document.addEventListener('scroll', () => {
         if (header) {
           header.classList.toggle('shadow-sm', document.documentElement.scrollTop > 0);
@@ -337,6 +337,25 @@ if (!isset($_SESSION['access_token'])) {
     <script src="node_modules/@coreui/utils/dist/umd/index.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/@coreui/coreui@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Xjrv08HR1c2s0dxQXZLAK1a0A+er+hbRmumMrQbmr0XmSF6/j09KKC6RuwDi3vKM" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
+    <script>
+$(document).ready(function() {
+    $('#submit-button').click(function(e) {
+        e.preventDefault();
+
+        $.ajax({
+            type: 'POST',
+            url: $('#flag-form').attr('action'),
+            data: $('#flag-form').serialize(),
+            success: function(response) {
+              // var data = JSON.parse(response);
+              //   $('#message').text(data.message);
+              var data = JSON.parse(response);
+                alert(data.message);
+            }
+        });
+    });
+});
+</script>
     <script> 
     </script>
   </body>

@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,13 +15,18 @@
     <hr>
     <h2>Comments:</h2>
     <?php
+    
+    // echo '<pre>';
+    // var_dump($_SESSION);
+    // echo '</pre>';
+    
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $comment = $_POST["comment"];
             echo "<p>" . $comment . "</p>"; // Vulnerable output
 
             // Check if the comment contains any <script> tags
             if (stripos($comment, "<script") !== false) {
-                echo "<p>Flag: FLAG123456789</p>"; // Display flag
+                echo "<p>Flag: FLAGhackedfirst3456</p>"; // Display flag
             }
         }
     ?>
